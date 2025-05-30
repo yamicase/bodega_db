@@ -1,0 +1,21 @@
+<h1>Lista de Productos</h1>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Precio Compra</th>
+        <th>Precio Venta</th>
+        <th>Acciones</th>
+    </tr>
+    {% for producto in productos %}
+    <tr>
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.descripcion }}</td>
+        <td>{{ producto.precio_compra }}</td>
+        <td>{{ producto.precio_venta }}</td>
+        <td>
+            <a href="{% url 'agregar_producto' %}">Agregar</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
